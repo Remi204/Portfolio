@@ -4,85 +4,73 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Meindinyo Abiye — Frontend Developer</title>
-  <meta name="description" content="Meindinyo Abiye — Frontend developer (Html,Css,JavaScript,React, Next.js, TypeScript). Portfolio with projects and contact." />
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind CDN (good for a quick portfolio) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Tailwind config for custom colors (blue -> emerald gradient)
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandBlue: '#0ea5e9',    // sky-500 like
-            brandEmerald: '#10b981'  // emerald-500
-          }
-        }
-      }
-    }
-  </script>
+
+  <meta name="description" content="Meindinyo Abiye — Frontend developer since 2023. React, Next.js, TypeScript. Projects, contact, and case studies." />
 
   <style>
-    /* small custom utilities */
-    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
-    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.12); }
-    .project-thumb { min-height: 140px; border-radius: 8px; overflow: hidden; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg, rgba(14,165,233,0.06), rgba([...]
-    /* simple fade-in on scroll */
-    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-    /* focus outline */
-    .focus-ring:focus { outline: 3px solid rgba(14,165,233,0.18); outline-offset: 2px; border-radius: 8px; }
+    .frost {
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .project-screenshot {
+      min-height: 160px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(14,165,233,0.04));
+      border-radius: 8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: #111827;
+    }
   </style>
 </head>
-<body class="bg-white text-slate-800 antialiased transition-colors duration-300">
-  <div class="max-w-6xl mx-auto px-6 py-10">
-
+<body class="bg-white text-slate-800 antialiased transition-colors duration-200">
+  <div class="max-w-5xl mx-auto px-6 py-12">
     <!-- Header -->
-    <header class="flex items-center justify-between gap-4 mb-10">
+    <header class="flex items-center justify-between mb-12">
       <div>
         <h1 class="text-2xl font-semibold">Meindinyo Abiye</h1>
         <p class="text-sm text-slate-500">Frontend developer building responsive and accessible web apps</p>
       </div>
 
-      <div class="flex items-center gap-3">
-        <a id="downloadResume" href="resume.pdf" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-md bg-gradient-to-r from-brandBlue to-brandEmerald text-white text-sm shadow-sm hover[...] 
-          Download Resume
-        </a>
-
-        <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-md glass focus-ring">
-          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v1m0 16v1m8.66-10h-1M4.34 12h-1M18.364 5.636l-.707.707M6.343 17.657l-.707.707M18.364 18.364l-.707-.707M6.343[...] 
+      <div class="flex items-center gap-4">
+        <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-md hover:bg-slate-100 frost">
+          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-10h-1M4.34 12h-1M18.364 5.636l-.707.707M6.343 17.657l-.707.707M18.364 18.364l-.707-.707M6.343 6.343l-.707-.707M12 6a6 6 0 100 12 6 6 0 000-12z"/>
           </svg>
         </button>
 
-        <a href="#contact" class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-slate-200 text-sm hover:bg-slate-50 focus-ring">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-md text-sm hover:opacity-95">
           Contact
         </a>
       </div>
     </header>
 
     <!-- Hero -->
-    <section class="grid md:grid-cols-2 gap-8 items-center mb-12 reveal" id="hero">
+    <section class="grid md:grid-cols-2 gap-8 items-center mb-12">
       <div>
         <h2 class="text-3xl md:text-4xl font-bold leading-tight">I build fast, accessible, and polished frontends.</h2>
-        <p class="mt-4 text-slate-600">I’m a frontend developer based in Port-Harcourt. Since 2023 I’ve been building clean, scalable web apps using React and TypeScript. I’m passionate about UI[...] 
+        <p class="mt-4 text-slate-600">I’m a frontend developer based in Port-Harcourt. Since 2023 I’ve been building clean, scalable web apps using React and TypeScript. I’m passionate about UI design, performance and turning ideas into smooth user experiences.</p>
 
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#projects" class="px-4 py-2 rounded-md bg-gradient-to-r from-brandBlue to-brandEmerald text-white shadow-sm text-sm hover:opacity-95 focus-ring">See projects</a>
-          <a href="#about" class="px-4 py-2 border border-slate-200 rounded-md text-sm hover:bg-slate-50 focus-ring">About me</a>
-          <a href="mailto:abiyeremimeindinyo@gmail.com" class="px-4 py-2 border border-slate-200 rounded-md text-sm hover:bg-slate-50 focus-ring">Email</a>
+          <a href="#projects" class="px-4 py-2 bg-indigo-600 text-white rounded-md shadow-sm hover:bg-indigo-700">See projects</a>
+          <a href="#about" class="px-4 py-2 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50">About me</a>
+          <a href="mailto:abiyeremimeindinyo@gmail.com" class="px-4 py-2 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50">Email</a>
         </div>
 
-        <div class="mt-6 text-sm text-slate-500"><strong>Stack:</strong> React · Next.js · TypeScript · Figma · Git</div>
+        <div class="mt-6 flex gap-3 text-slate-500 text-sm">
+          <div><strong>Stack:</strong> React · Next.js · TypeScript · Figma · Git</div>
+        </div>
       </div>
 
       <div class="hidden md:flex justify-center">
-        <div class="w-72 h-48 rounded-xl project-thumb shadow-sm">
-          <!-- simple mock preview (replace with screenshot) -->
-          <div class="text-center px-4">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="mx-auto mb-2 text-slate-600">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="M8 3v4"></path>
+        <div class="w-64 h-44 rounded-xl bg-gradient-to-tr from-indigo-50 to-sky-50 project-screenshot shadow-md">
+          <div class="text-center">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="mx-auto mb-2">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 3v4"></path>
             </svg>
             <div class="text-sm text-slate-600">Project previews</div>
           </div>
@@ -92,67 +80,154 @@
 
     <!-- Projects -->
     <section id="projects" class="mb-12">
-      <div class="flex items-center justify-between mb-4">
-        <h3 class="text-xl font-semibold">Selected projects</h3>
-        <p class="text-sm text-slate-500">3 projects — interactive demos & deployed builds</p>
-      </div>
+      <h3 class="text-xl font-semibold mb-4">Featured projects</h3>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project Card Template: update screenshot <img> if you have images -->
-        <!-- 1 -->
-        <article class="border rounded-lg p-4 bg-white card-hover transform transition-transform reveal">
-          <div class="project-thumb mb-4">
-            <img src="" alt="FewChore preview (add image url)" class="w-full h-full object-cover" style="display:none;">
-            <div class="text-sm text-slate-700">FewChore Finance</div>
-          </div>
-          <h4 class="font-semibold">FewChore Finance</h4>
-          <p class="mt-1 text-sm text-slate-600">Finance-oriented frontend with polished UI and flows.</p>
-          <div class="mt-3 flex gap-2 flex-wrap text-xs">
-            <span class="px-2 py-1 bg-slate-100 rounded-md">React</span>
-            <span class="px-2 py-1 bg-slate-100 rounded-md">TypeScript</span>
-            <span class="px-2 py-1 bg-slate-100 rounded-md">Tailwind</span>
-          </div>
-          <div class="mt-4 flex gap-3 items-center">
-            <a href="https://www.fewchorefinance.com/" target="_blank" rel="noopener" class="text-indigo-600 hover:underline text-sm">Live demo</a>
-            <a href="https://github.com/Remi204" target="_blank" rel="noopener" class="text-sm text-slate-500 hover:underline">GitHub</a>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Project 1 -->
+        <article class="border border-slate-100 rounded-lg p-5 hover:shadow-lg transition-shadow bg-white">
+          <div class="flex items-start gap-4">
+            <div class="w-24 project-screenshot shrink-0">
+              <div class="text-xs text-center px-2">FewChore Finance</div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-semibold">FewChore Finance</h4>
+              <p class="mt-1 text-sm text-slate-600">A finance web project — visit the live demo to explore the UI and flows.</p>
+
+              <div class="mt-3 flex items-center gap-2 flex-wrap text-xs">
+                <span class="px-2 py-1 bg-slate-100 rounded-md">React</span>
+                <span class="px-2 py-1 bg-slate-100 rounded-md">TypeScript</span>
+                <span class="px-2 py-1 bg-slate-100 rounded-md">Tailwind</span>
+              </div>
+
+              <div class="mt-4 flex gap-3">
+                <a class="text-sm text-indigo-600 hover:underline" href="https://www.fewchorefinance.com/" target="_blank" rel="noopener">Live demo</a>
+                <a class="text-sm text-slate-500 hover:underline" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- 2 -->
-        <article class="border rounded-lg p-4 bg-white card-hover transform transition-transform reveal">
-          <div class="project-thumb mb-4">
-            <div class="text-sm text-slate-700">CodesTrav</div>
-          </div>
-          <h4 class="font-semibold">CodesTrav</h4>
-          <p class="mt-1 text-sm text-slate-600">Developer-focused site showcasing code snippets and utilities.</p>
-          <div class="mt-3 flex gap-2 flex-wrap text-xs">
-            <span class="px-2 py-1 bg-slate-100 rounded-md">Next.js</span>
-            <span class="px-2 py-1 bg-slate-100 rounded-md">TypeScript</span>
-          </div>
-          <div class="mt-4 flex gap-3 items-center">
-            <a href="https://codestravercel.vercel.app/" target="_blank" rel="noopener" class="text-indigo-600 hover:underline text-sm">Live demo</a>
-            <a href="https://github.com/Remi204" target="_blank" rel="noopener" class="text-sm text-slate-500 hover:underline">GitHub</a>
+        <!-- Project 2 -->
+        <article class="border border-slate-100 rounded-lg p-5 hover:shadow-lg transition-shadow bg-white">
+          <div class="flex items-start gap-4">
+            <div class="w-24 project-screenshot shrink-0">
+              <div class="text-xs text-center px-2">CodesTrav</div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-semibold">CodesTrav</h4>
+              <p class="mt-1 text-sm text-slate-600">Developer-focused site showcasing code and small tools — live demo available.</p>
+
+              <div class="mt-3 flex items-center gap-2 flex-wrap text-xs">
+                <span class="px-2 py-1 bg-slate-100 rounded-md">Next.js</span>
+                <span class="px-2 py-1 bg-slate-100 rounded-md">TypeScript</span>
+                <span class="px-2 py-1 bg-slate-100 rounded-md">Vercel</span>
+              </div>
+
+              <div class="mt-4 flex gap-3">
+                <a class="text-sm text-indigo-600 hover:underline" href="https://codestravercel.vercel.app/" target="_blank" rel="noopener">Live demo</a>
+                <a class="text-sm text-slate-500 hover:underline" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- 3 -->
-        <article class="border rounded-lg p-4 bg-white card-hover transform transition-transform reveal">
-          <div class="project-thumb mb-4">
-            <div class="text-sm text-slate-700">ProGo</div>
-          </div>
-          <h4 class="font-semibold">ProGo</h4>
-          <p class="mt-1 text-sm text-slate-600">Landing / product demo with interactive pieces and clear CTAs.</p>
-          <div class="mt-3 flex gap-2 flex-wrap text-xs">
-            <span class="px-2 py-1 bg-slate-100 rounded-md">Next.js</span>
-            <span class="px-2 py-1 bg-slate-100 rounded-md">React</span>
-          </div>
-          <div class="mt-4 flex gap-3 items-center">
-            <a href="https://progo.vercel.app/" target="_blank" rel="noopener" class="text-indigo-600 hover:[...] 
+        <!-- Project 3 -->
+        <article class="border border-slate-100 rounded-lg p-5 hover:shadow-lg transition-shadow bg-white">
+          <div class="flex items-start gap-4">
+            <div class="w-24 project-screenshot shrink-0">
+              <div class="text-xs text-center px-2">ProGo</div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-semibold">ProGo</h4>
+              <p class="mt-1 text-sm text-slate-600">A project/landing demo built with modern tooling — see the live site for interaction examples.</p>
+
+              <div class="mt-3 flex items-center gap-2 flex-wrap text-xs">
+                <span class="px-2 py-1 bg-slate-100 rounded-md">Next.js</span>
+                <span class="px-2 py-1 bg-slate-100 rounded-md">React</span>
+                <span class="px-2 py-1 bg-slate-100 rounded-md">TypeScript</span>
+              </div>
+
+              <div class="mt-4 flex gap-3">
+                <a class="text-sm text-indigo-600 hover:underline" href="https://progo.vercel.app/" target="_blank" rel="noopener">Live demo</a>
+                <a class="text-sm text-slate-500 hover:underline" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- About -->
+    <section id="about" class="mb-12">
+      <h3 class="text-xl font-semibold mb-4">About</h3>
+      <div class="prose max-w-none text-slate-700">
+        <p><strong>Meindinyo Abiye</strong> — Frontend developer based in Port-Harcourt. Since 2023 I’ve been building clean, scalable web apps using React and TypeScript. I’m passionate about UI design, performance and turning ideas into smooth user experiences.</p>
+
+        <p>Outside of work I tinker with design systems, contribute to small UI utilities, and refine interaction patterns to make apps feel faster and clearer.</p>
+
+        <ul>
+          <li><strong>Experience:</strong> Projects and work since 2023 — personal builds and deployments to Vercel.</li>
+          <li><strong>Interests:</strong> Accessibility, design systems, performance, developer experience.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mb-6">
+      <h3 class="text-xl font-semibold mb-4">Contact</h3>
+      <div class="grid md:grid-cols-2 gap-6 items-start">
+        <div class="space-y-3">
+          <p class="text-slate-600">Shoot me a message — I usually reply within a few days.</p>
+
+          <div class="text-sm">
+            <div class="mb-2"><strong>Email</strong>: <a class="text-indigo-600 hover:underline" href="mailto:abiyeremimeindinyo@gmail.com">abiyeremimeindinyo@gmail.com</a></div>
+            <div class="mb-2"><strong>GitHub</strong>: <a class="text-indigo-600 hover:underline" href="#" target="_blank" rel="noopener">Remi204</a></div>
+            <div class="mb-2"><strong>LinkedIn</strong>: <a class="text-indigo-600 hover:underline" href="#" target="_blank" rel="noopener">Abiye Meindinyo
+              
+            </a></div>
+          </div>
+
+          <div class="mt-4 text-xs text-slate-500">Tip: Replace the GitHub/LinkedIn placeholders with real links and add short GIFs or screenshots for each project card.</div>
+        </div>
+
+        <!-- Simple contact form (mailto fallback) -->
+        <form onsubmit="window.location='mailto:abiyeremimeindinyo@gmail.com?subject=Portfolio%20Inquiry&body='+encodeURIComponent(document.getElementById('msg').value);return false;" class="space-y-3">
+          <label class="block">
+            <span class="text-sm text-slate-700">Message</span>
+            <textarea id="msg" rows="5" class="mt-1 block w-full rounded-md border border-slate-200 p-3 text-sm" placeholder="Hi Meindinyo — I saw your portfolio and..."></textarea>
+          </label>
+          <div class="flex gap-3">
+            <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Send email</button>
+            <a href="mailto:abiyeremimeindinyo@gmail.com" class="px-4 py-2 border rounded-md text-slate-700">Email directly</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-sm text-slate-500">
+      <div>Made by <strong>Meindinyo Abiye</strong> · Frontend developer since 2023</div>
+      <div class="mt-2">Replace example GitHub/LinkedIn links with your real profiles before sharing.</div>
+    </footer>
   </div>
+
+  <script>
+    const btn = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    function setDark(d) {
+      if (d) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('bg-slate-900','text-slate-100');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.body.classList.remove('bg-slate-900','text-slate-100');
+      }
+    }
+    let dark = false;
+    btn.addEventListener('click', () => {
+      dark = !dark;
+      setDark(dark);
+    });
+  </script>
 </body>
 </html>

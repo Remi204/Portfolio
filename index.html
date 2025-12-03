@@ -5,92 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meindinyo Abiye | Full Stack Developer</title>
 
+  <!-- Modern Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    :root {
+      --primary: #4f46e5;
+      --bg-dark: #0a0a0a;
+      --bg-card: #141414;
+      --text-light: #e5e5e5;
+      --text-muted: #b0b0b0;
+    }
+
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0a0a0a;
-      color: white;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
     }
 
     /* Header */
     header {
       text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #1f2024, #121212);
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #18181b, #0a0a0a);
     }
 
-    header h1 { 
-      font-size: 3rem; 
-      margin: 10px 0; 
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+      opacity: 0.8;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 25px;
-      margin-top: 20px;
-      background: #4f46e5;
+      padding: 14px 30px;
+      margin-top: 30px;
+      background: var(--primary);
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.25s;
     }
 
-    /* Sections */
+    .btn:hover {
+      background: #3e3acb;
+      transform: translateY(-3px);
+    }
+
+    /* Section layout */
     section {
-      padding: 60px 20px;
-      max-width: 900px;
+      padding: 80px 20px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    h2 { 
-      text-align: center; 
-      margin-bottom: 40px; 
+    h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    /* About */
+    #about p {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      font-size: 1.1rem;
+      opacity: 0.9;
     }
 
     /* Skills */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      text-align: center;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 15px;
+      text-align: center;
     }
 
     .skills-grid span {
-      background: #1f1f1f;
-      padding: 10px 15px;
+      background: var(--bg-card);
+      padding: 12px;
       border-radius: 6px;
+      display: block;
+      transition: 0.25s;
+      border: 1px solid #1f1f1f;
+    }
+
+    .skills-grid span:hover {
+      transform: translateY(-3px);
+      background: #1c1c1c;
+      border-color: var(--primary);
     }
 
     /* Projects */
     .project-grid {
       display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     }
 
     .project {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 8px;
+      background: var(--bg-card);
+      padding: 25px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+      border: 1px solid #1f1f1f;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      background: #1b1b1b;
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+      font-size: 1.35rem;
+    }
+
+    .project p {
+      opacity: 0.85;
     }
 
     .project a {
       display: inline-block;
-      margin-top: 10px;
-      color: #4f46e5;
-      text-decoration: none;
+      margin-top: 12px;
+      color: var(--primary);
+      font-weight: 600;
+      transition: 0.2s;
     }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
+    .project a:hover {
+      color: #3e3acb;
+      text-decoration: underline;
     }
+
+    /* Contact */
+    #contact p {
+      text-align: center;
+      font-size: 1.15rem;
+    }
+
+    .email-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #1c1c1c;
+      border: 1px solid var(--primary);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.25s;
+    }
+
+    .email-btn:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
   </style>
 </head>
 
@@ -107,9 +194,9 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I’m a dedicated full stack developer who enjoys building clean, fast, and reliable digital products.
-      I focus on crafting smooth user experiences and scalable backend systems. I take pride in delivering
-      quality work, solving problems creatively, and helping businesses bring their ideas to life through code.
+      I’m a full stack developer who builds clean, fast, and scalable digital solutions.
+      I focus on creating smooth user experiences combined with robust backend systems.
+      My goal is to bring ideas to life through efficient, creative engineering.
     </p>
   </section>
 
@@ -119,57 +206,57 @@
     <div class="skills-grid">
       <span>HTML</span><span>CSS</span><span>JavaScript</span>
       <span>React</span><span>Next.js</span><span>Node.js</span>
-      <span>MongoDB</span><span>Figma</span><span>Tailwind</span><span>UI/UX</span>
+      <span>MongoDB</span><span>Tailwind CSS</span>
+      <span>Figma</span><span>UI/UX</span>
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project-grid">
 
+    <div class="project-grid">
       <div class="project">
         <h3>FewChore Finance</h3>
-        <p>Financial services platform with modern UI and smooth user experience.</p>
+        <p>Financial services platform with a sleek modern UI and smooth UX-focused design.</p>
         <a href="https://www.fewchorefinance.com/" target="_blank">Live Demo</a>
       </div>
 
       <div class="project">
         <h3>Codestra</h3>
-        <p>A sleek and responsive web application showcasing clean design and functionality.</p>
+        <p>A responsive and minimal web app showcasing clean interface and interactions.</p>
         <a href="https://codestravercel.vercel.app/" target="_blank">Live Demo</a>
       </div>
 
       <div class="project">
         <h3>Progo</h3>
-        <p>Professional web solution built with optimized performance.</p>
+        <p>Professional web solution built with optimized loading and performance.</p>
         <a href="https://progo.vercel.app/" target="_blank">Live Demo</a>
       </div>
 
       <div class="project">
         <h3>ToboPay</h3>
-        <p>A modern payment platform focused on user convenience and smooth interactions.</p>
+        <p>A modern payment platform with user-centered experience and smooth UI.</p>
         <a href="https://tobopay.co/" target="_blank">Live Demo</a>
       </div>
 
       <div class="project">
         <h3>WeLearn Global</h3>
-        <p>Learning platform designed with a strong user-first approach.</p>
+        <p>Learning platform designed around simplicity, accessibility, and engagement.</p>
         <a href="https://welearnglobal.net/welcome" target="_blank">Live Demo</a>
       </div>
-
     </div>
+
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p style="text-align:center;">
-      Email: <strong>abiyeremimeindinyo@gmail.com</strong>
-    </p>
+    <p>Email: <strong>abiyeremimeindinyo@gmail.com</strong></p>
+    <div style="text-align:center;">
+      <a class="email-btn" href="mailto:abiyeremimeindinyo@gmail.com">Send Email</a>
+    </div>
   </section>
-
-  
 
 </body>
 </html>

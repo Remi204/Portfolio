@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Abiye Remi Meindinyo — Portfolio</title>
+<title>Abiye Meindinyo — Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -32,7 +32,6 @@
 
   a { text-decoration:none; color:inherit; }
 
-  /* Fade Animations */
   [data-animate]{
     opacity:0;
     transform: translateY(30px);
@@ -43,7 +42,6 @@
     transform: translateY(0);
   }
 
-  /* HEADER */
   header {
     padding: 80px 20px 60px;
     text-align: center;
@@ -109,7 +107,6 @@
   section { margin:80px 0; }
   section h2 { text-align:center; font-size:26px; margin-bottom:30px; }
 
-  /* SKILLS */
   .skills-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
@@ -138,7 +135,6 @@
     margin-bottom: 10px;
   }
 
-  /* PROJECTS */
   .project-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -162,7 +158,6 @@
   .project p{ font-size:14px; color:var(--muted); margin-bottom:12px; }
   .project a{ color:var(--accent); font-weight:600; }
 
-  /* CONTACT */
   .contact-cards{ max-width:600px; margin:auto; display:grid; gap:20px; }
   .contact-card{
     padding:22px;
@@ -184,138 +179,134 @@
 <body>
 
 <header data-animate>
-  <div class="brand-logo">MA</div>
-  <h1>Meindinyo Abiye</h1>
+  <div class="brand-logo">AM</div>
+  <h1>Abiye Meindinyo</h1>
   <p>Full Stack Developer — React · Next.js · Node · UI/UX. I build fast, elegant, modern applications.</p>
   <a href="#projects" class="cta">View My Projects</a>
 </header>
 
 <main>
 
-  <!-- SKILLS -->
-  <section data-animate>
-    <h2>Skills & Experience</h2>
+<section data-animate>
+<h2>Skills & Experience</h2>
 
-    <div class="skills-grid">
+<div class="skills-grid">
 
-      <div class="skill-card">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" class="skill-img">
-        <span>HTML</span>
-      </div>
+<div class="skill-card">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" class="skill-img">
+<span>HTML</span>
+</div>
 
-      <div class="skill-card">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" class="skill-img">
-        <span>CSS</span>
-      </div>
+<div class="skill-card">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" class="skill-img">
+<span>CSS</span>
+</div>
 
-      <div class="skill-card">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-img">
-        <span>JavaScript</span>
-      </div>
+<div class="skill-card">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" class="skill-img">
+<span>JavaScript</span>
+</div>
 
-      <div class="skill-card">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" class="skill-img">
-        <span>React</span>
-      </div>
+<div class="skill-card">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" class="skill-img">
+<span>React</span>
+</div>
 
-      <div class="skill-card">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js" class="skill-img">
-        <span>Next.js</span>
-      </div>
+<div class="skill-card">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" class="skill-img">
+<span>Next.js</span>
+</div>
 
-      <div class="skill-card">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-img">
-        <span>Node.js</span>
-      </div>
+<div class="skill-card">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" class="skill-img">
+<span>Node.js</span>
+</div>
 
-      <div class="skill-card">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-img">
-        <span>MongoDB</span>
-      </div>
+<div class="skill-card">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" class="skill-img">
+<span>MongoDB</span>
+</div>
 
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="skill-img">
-        <span>Figma</span>
-      </div>
+<div class="skill-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" class="skill-img">
+<span>Figma</span>
+</div>
 
-    </div>
-  </section>
+</div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" data-animate>
-    <h2>Featured Projects</h2>
+<section id="projects" data-animate>
+<h2>Featured Projects</h2>
 
-    <div class="project-grid">
+<div class="project-grid">
 
-      <div class="project">
-        <h3>FewChore Finance</h3>
-        <p>Modern financial services dashboard with clean UI and seamless UX flows.</p>
-        <a href="https://www.fewchorefinance.com" target="_blank">Live Demo</a>
-      </div>
+<div class="project">
+<h3>FewChore Finance</h3>
+<p>Modern financial services dashboard with clean UI and seamless UX flows.</p>
+<a href="https://www.fewchorefinance.com" target="_blank">Live Demo</a>
+</div>
 
-      <div class="project">
-        <h3>Codestra</h3>
-        <p>Minimal development platform built for speed, clarity and consistency.</p>
-        <a href="https://codestravercel.vercel.app" target="_blank">Live Demo</a>
-      </div>
+<div class="project">
+<h3>Codestra</h3>
+<p>Minimal development platform built for speed, clarity and consistency.</p>
+<a href="https://codestravercel.vercel.app" target="_blank">Live Demo</a>
+</div>
 
-      <div class="project">
-        <h3>Progo</h3>
-        <p>Performance driven landing page with rich animations and smooth UI/UX.</p>
-        <a href="https://progo.vercel.app" target="_blank">Live Demo</a>
-      </div>
+<div class="project">
+<h3>Progo</h3>
+<p>Performance driven landing page with rich animations and smooth UI/UX.</p>
+<a href="https://progo.vercel.app" target="_blank">Live Demo</a>
+</div>
 
-      <div class="project">
-        <h3>Tobopay</h3>
-        <p>Modern digital payment system with fast transfers and intuitive payment flows.</p>
-        <a href="https://tobopay.co" target="_blank">Live Demo</a>
-      </div>
+<div class="project">
+<h3>Tobopay</h3>
+<p>Modern digital payment system with fast transfers and intuitive payment flows.</p>
+<a href="https://tobopay.co" target="_blank">Live Demo</a>
+</div>
 
-      <div class="project">
-        <h3>FoodGrab</h3>
-        <p>Food delivery platform that connects users with local restaurants for quick, convenient ordering and delivery.</p>
-        <a href="https://food-grab-web.vercel.app/" target="_blank">Live Demo</a>
-      </div>
+<div class="project">
+<h3>FoodGrab</h3>
+<p>Food delivery platform that connects users with local restaurants.</p>
+<a href="https://food-grab-web.vercel.app/" target="_blank">Live Demo</a>
+</div>
 
-      <div class="project">
-        <h3>Quill</h3>
-        <p>An AI assistant that helps users chat with their PDF documents efficiently.</p>
-        <a href="https://quill-umber.vercel.app/" target="_blank">Live Demo</a>
-      </div>
+<div class="project">
+<h3>Quill</h3>
+<p>An AI assistant that helps users chat with their PDF documents efficiently.</p>
+<a href="https://quill-umber.vercel.app/" target="_blank">Live Demo</a>
+</div>
 
-      <div class="project">
-        <h3>Bilding</h3>
-        <p>Fully functional website supporting multiple user roles for diverse workflows.</p>
-        <a href="https://bilding.vercel.app/" target="_blank">Live Demo</a>
-      </div>
+<div class="project">
+<h3>Bilding</h3>
+<p>Fully functional website supporting multiple user roles.</p>
+<a href="https://bilding.vercel.app/" target="_blank">Live Demo</a>
+</div>
 
-    </div>
-  </section>
+</div>
+</section>
 
-  <!-- CONTACT -->
-  <section data-animate>
-    <h2>Contact</h2>
+<section data-animate>
+<h2>Contact</h2>
 
-    <div class="contact-cards">
-      <div class="contact-card"><strong>Email:</strong> abiyeremimeindinyo@gmail.com</div>
-    </div>
-  </section>
+<div class="contact-cards">
+<div class="contact-card"><strong>Email:</strong> abiyeremimeindinyo@gmail.com</div>
+</div>
+</section>
 
 </main>
 
-<footer>© 2023 Meindinyo </footer>
+<footer>© 2026 Abiye Meindinyo</footer>
 
 <script>
-  /* Scroll animation */
-  const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    })
-  }, {threshold:0.2});
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+})
+},{threshold:0.2});
 
-  document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
+document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
 </script>
 
 </body>
